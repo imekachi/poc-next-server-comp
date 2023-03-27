@@ -1,3 +1,3 @@
 export default function RootLoader() {
-  return <div>Home page is loading (loading.tsx)...</div>
+  return <div>RootLoader loading... (root loading.tsx)</div>
 }
