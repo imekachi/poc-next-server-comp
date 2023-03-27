@@ -1,0 +1,1 @@
+export { HybridComp } from './HybridComp'
