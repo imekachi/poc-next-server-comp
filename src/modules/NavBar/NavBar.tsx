@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { cache, use } from 'react'
+import { cache } from 'react'
 import { Counter } from '@/modules/Counter'
 import { EnvLegend } from '@/modules/EnvLegend'
 import { sleep } from '@/utils/sleep'
@@ -18,11 +18,12 @@ export const NavBar = async () => {
   return (
     <EnvLegend env="server">
       <nav className="flex justify-between items-center py-4 px-6 shadow-lg">
-        <div className="flex space-x-4 text-blue-500">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-blue-500 underline">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/pokemon-server">PK Server-Only</Link>
-          <Link href="/pokemon-client">PK Client-Only</Link>
+          <Link href="/pokemon-server">Server-Only Query</Link>
+          <Link href="/pokemon-client">Client-Only Query</Link>
+          <Link href="/pokemon-shared-cache">Shared Cache Query</Link>
         </div>
         <div>
           <Counter step={2} config={{ initialValue }} />

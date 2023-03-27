@@ -4,7 +4,6 @@ let apolloClient: ApolloClient<any> | null = null
 
 function createApolloClient() {
   return new ApolloClient({
-    // ssrMode: typeof window === 'undefined',
     link: new HttpLink({
       uri: 'https://graphqlpokemon.favware.tech/v7',
     }),
