@@ -1,5 +1,5 @@
-import { cx } from '@/utils/cx'
 import { ReactNode } from 'react'
+import { cx } from '@/utils/cx'
 
 export type EnvLegendProps = {
   env: 'server' | 'client'

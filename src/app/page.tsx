@@ -1,6 +1,6 @@
+import { ClientOnlySection } from '@/modules/ClientOnlySection'
 import { EnvLegend } from '@/modules/EnvLegend'
 import { HybridComp } from '@/modules/HybridComp'
-import { ClientOnlySection } from '@/modules/ClientOnlySection'
 
 export default function Home() {
   return (

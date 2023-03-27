@@ -1,4 +1,4 @@
-import { EnvLegend } from '../../EnvLegend'
+import { EnvLegend } from '@/modules/EnvLegend'
 
 export const NavBarSkeleton = () => {
   return (

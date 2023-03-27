@@ -1,7 +1,7 @@
 'use client'
 
 import { EnvLegend } from '@/modules/EnvLegend'
-import { HybridComp } from '@/modules/HybridComp/HybridComp'
+import { HybridComp } from '@/modules/HybridComp'
 
 export const ClientOnlySection = () => {
   return (

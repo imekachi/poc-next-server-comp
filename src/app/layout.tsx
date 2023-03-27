@@ -1,6 +1,6 @@
 import './globals.css'
-import { NavBar, NavBarSkeleton } from '@/modules/NavBar'
 import { ReactNode, Suspense } from 'react'
+import { NavBar, NavBarSkeleton } from '@/modules/NavBar'
 
 export const metadata = {
   title: 'Create Next App',

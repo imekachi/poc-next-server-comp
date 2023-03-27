@@ -1,4 +1,4 @@
-import { EnvLegend, EnvLegendProps } from '../EnvLegend'
+import { EnvLegend, EnvLegendProps } from '@/modules/EnvLegend'
 
 export type HybridCompProps = {
   env: EnvLegendProps['env']

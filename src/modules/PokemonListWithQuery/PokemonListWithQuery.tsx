@@ -1,8 +1,8 @@
 'use client'
 
-import { EnvLegend } from '../EnvLegend'
-import { usePokemonsQuery } from '../pokemon'
-import { PokemonList } from '../PokemonList'
+import { EnvLegend } from '@/modules/EnvLegend'
+import { usePokemonsQuery } from '@/modules/pokemon'
+import { PokemonList } from '@/modules/PokemonList'
 
 export const PokemonListWithQuery = () => {
   const { data, loading } = usePokemonsQuery()

@@ -1,7 +1,7 @@
 'use client'
 
 import { ElementType, ReactNode, useState } from 'react'
-import { EnvLegend } from '../EnvLegend'
+import { EnvLegend } from '@/modules/EnvLegend'
 
 export type CounterProps = {
   jsxComp?: ReactNode

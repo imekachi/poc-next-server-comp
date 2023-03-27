@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Pokemon } from '../pokemon'
+import { Pokemon } from '@/modules/pokemon'
 
 export type PokemonListProps = {
   pokemons: Pokemon[]

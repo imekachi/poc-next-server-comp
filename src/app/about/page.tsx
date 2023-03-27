@@ -1,8 +1,8 @@
+import { cache } from 'react'
 import { Counter } from '@/modules/Counter'
 import { EmbedServerComp } from '@/modules/EmbedServerComp'
 import { EnvLegend } from '@/modules/EnvLegend'
 import { sleep } from '@/utils/sleep'
-import { cache } from 'react'
 
 // use cache to prevent hydration mismatch
 const getInitialValues = cache(async () => {

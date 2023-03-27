@@ -1,8 +1,8 @@
-import { sleep } from '@/utils/sleep'
 import Link from 'next/link'
-import { Counter } from '../Counter'
-import { EnvLegend } from '../EnvLegend'
 import { cache, use } from 'react'
+import { Counter } from '@/modules/Counter'
+import { EnvLegend } from '@/modules/EnvLegend'
+import { sleep } from '@/utils/sleep'
 
 // use cache to prevent hydration mismatch
 const getInitialValues = cache(async () => {
