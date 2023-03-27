@@ -1,5 +1,6 @@
 import './globals.css'
 import { ReactNode, Suspense } from 'react'
+import { ApolloClientProvider } from '@/libs/ApolloClientProvider'
 import { NavBar, NavBarSkeleton } from '@/modules/NavBar'
 
 export const metadata = {
@@ -17,11 +18,13 @@ export default function RootLayout(props: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <Suspense fallback={<NavBarSkeleton />}>
-          {/* @ts-expect-error Async Server Component */}
-          <NavBar />
-        </Suspense>
-        <main className="py-4 px-2">{children}</main>
+        <ApolloClientProvider>
+          <Suspense fallback={<NavBarSkeleton />}>
+            {/* @ts-expect-error Async Server Component */}
+            <NavBar />
+          </Suspense>
+          <main className="py-4 px-2">{children}</main>
+        </ApolloClientProvider>
       </body>
     </html>
   )
