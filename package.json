@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "^18.13",
+    "pnpm": ">=7"
+  },
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@types/node": "18.15.10",
