@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
     typedRoutes: true,
   },
+  images: {
+    domains: ['play.pokemonshowdown.com'],
+  },
 }
 
 module.exports = nextConfig

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Counter } from '../Counter'
 import { EnvLegend } from '../EnvLegend'
 import { cache, use } from 'react'
-import { NavBarSkeleton } from './NavBarSkeleton/NavBarSkeleton'
 
 // use cache to prevent hydration mismatch
 const getInitialValues = cache(async () => {
@@ -22,7 +21,7 @@ export const NavBar = async () => {
         <div className="flex space-x-4 text-blue-500">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/pokemon">Pokemon</Link>
+          <Link href="/pokemon-server">Pokemon Server only</Link>
         </div>
         <div>
           <Counter step={2} config={{ initialValue }} />
