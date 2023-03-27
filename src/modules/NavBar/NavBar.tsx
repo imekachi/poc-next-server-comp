@@ -21,7 +21,8 @@ export const NavBar = async () => {
         <div className="flex space-x-4 text-blue-500">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/pokemon-server">Pokemon Server only</Link>
+          <Link href="/pokemon-server">PK Server-Only</Link>
+          <Link href="/pokemon-client">PK Client-Only</Link>
         </div>
         <div>
           <Counter step={2} config={{ initialValue }} />

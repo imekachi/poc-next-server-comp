@@ -4,14 +4,14 @@ import { PageHeader } from '@/modules/PageHeader'
 import { pokemonsQuery, PokemonsQuery } from '@/modules/pokemon'
 import { PokemonList } from '@/modules/PokemonList'
 
-export default async function PokemonPage() {
+export default async function PokemonServerOnlyPage() {
   const client = getApolloClient()
   const { data } = await client.query<PokemonsQuery>({
     query: pokemonsQuery,
     context: {
-      // fetchOptions: {
-      //   next: { revalidate: 5 },
-      // },
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
     },
   })
 

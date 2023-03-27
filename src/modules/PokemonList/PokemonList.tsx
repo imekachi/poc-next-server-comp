@@ -7,7 +7,7 @@ export type PokemonListProps = {
 
 export const PokemonList = ({ pokemons }: PokemonListProps) => {
   return (
-    <ol className="pl-6 space-y-2">
+    <ol className="space-y-2">
       {pokemons.map(pokemon => {
         return (
           <li key={pokemon.key} className="flex items-center space-x-2">

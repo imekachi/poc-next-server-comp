@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client'
+import { gql, useQuery } from '@apollo/client'
 import { Pokemon, pokemonFieldsFragment } from './pokemon'
 
 export const pokemonsQuery = gql`
@@ -13,3 +13,5 @@ export const pokemonsQuery = gql`
 export type PokemonsQuery = {
   getAllPokemon: Pokemon[]
 }
+
+export const usePokemonsQuery = () => useQuery<PokemonsQuery>(pokemonsQuery)
