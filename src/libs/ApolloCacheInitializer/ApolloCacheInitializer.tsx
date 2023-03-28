@@ -1,25 +1,27 @@
 'use client'
 import { useApolloClient } from '@apollo/client'
 import { ReactNode, useMemo } from 'react'
+import { initializeCache, parseSerializedApolloCache } from '@/libs/apollo'
 import { EnvLegend } from '@/modules/EnvLegend'
 
 /**
  * T = cache data
  */
-export type ApolloCacheInitializerProps<T extends object> = {
-  extractedCache: T
+export type ApolloCacheInitializerProps = {
+  serializedCache: string
   children: ReactNode
 }
 
-export const ApolloCacheInitializer = <T extends object>({
-  extractedCache,
+export const ApolloCacheInitializer = ({
+  serializedCache,
   children,
-}: ApolloCacheInitializerProps<T>) => {
+}: ApolloCacheInitializerProps) => {
   const client = useApolloClient()
 
+  // Run immediately during render
   useMemo(() => {
-    client.cache.restore(extractedCache)
-  }, [client.cache, extractedCache])
+    initializeCache(client, parseSerializedApolloCache(serializedCache))
+  }, [client, serializedCache])
 
   return (
     <EnvLegend env="client">

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { getApolloClient } from '@/libs/apollo'
+import { getApolloClient, getSerializedApolloCache } from '@/libs/apollo'
 import { ApolloCacheInitializer } from '@/libs/ApolloCacheInitializer'
 import { EnvLegend } from '@/modules/EnvLegend'
 import { PokemonsQuery, pokemonsQuery } from '@/modules/pokemon'
@@ -33,7 +33,9 @@ export default async function SharedCacheLayout({
         <div className="mb-4">
           Fetch and extract cache from server (layout.tsx)
         </div>
-        <ApolloCacheInitializer extractedCache={client.cache.extract()}>
+        <ApolloCacheInitializer
+          serializedCache={getSerializedApolloCache(client)}
+        >
           {children}
         </ApolloCacheInitializer>
       </div>

@@ -6,6 +6,7 @@ specifiers:
   '@types/react': 18.0.29
   '@types/react-dom': 18.0.11
   autoprefixer: ^10.4.14
+  deepmerge: ^4.3.1
   eslint: 8.36.0
   eslint-config-next: 13.2.4
   eslint-plugin-unused-imports: ^2.0.0
@@ -22,6 +23,7 @@ dependencies:
   '@types/node': 18.15.10
   '@types/react': 18.0.29
   '@types/react-dom': 18.0.11
+  deepmerge: 4.3.1
   eslint: 8.36.0
   eslint-config-next: 13.2.4_j4766f7ecgqbon3u7zlxn5zszu
   graphql: 16.6.0
@@ -734,6 +736,11 @@ packages:
 
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+
+  /deepmerge/4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /define-lazy-prop/2.0.0:
     resolution: {integrity: sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==}
