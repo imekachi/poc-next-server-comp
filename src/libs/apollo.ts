@@ -49,7 +49,9 @@ export function initializeCache<T extends object>(
   const existingCache = client.extract()
 
   // Merge the existing cache and the initialCache by prioritizing existing cache.
-  const mergedCache = deepmerge(initialCache, existingCache) as T
+  const mergedCache = deepmerge(initialCache, existingCache, {
+    arrayMerge: (target, source) => source
+  }) as T
 
   // Restore the cache with the merged cached
   client.cache.restore(mergedCache)
