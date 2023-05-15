@@ -21,6 +21,8 @@ export const NavBar = async () => {
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-blue-500 underline">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/async-children">Async Children</Link>
+          <Link href="/async-children-suspense">Async Children Suspense</Link>
           <Link href="/pokemon-server">Server-Only Query</Link>
           <Link href="/pokemon-client">Client-Only Query</Link>
           <Link href="/pokemon-shared-cache">Shared Cache Query</Link>
